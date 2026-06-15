@@ -1,0 +1,22 @@
+# Godot 4+
+.godot/
+
+# Export templates/cache
+.export/
+
+# Mono / C#
+.mono/
+data_*/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build outputs
+build/
+dist/
+exports/

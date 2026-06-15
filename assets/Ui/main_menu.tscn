@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://d3663hm5crjid"]
+
+[ext_resource type="FontFile" uid="uid://c1y8u578gcv8b" path="res://assets/fonts/BoldPixels.ttf" id="1_urgfs"]
+[ext_resource type="Script" uid="uid://copcjo2ubh0wt" path="res://assets/Ui/main_menu.gd" id="1_yhrs2"]
+[ext_resource type="Texture2D" uid="uid://bshikf0wv7q3p" path="res://assets/player/magi.png" id="2_hxuwj"]
+[ext_resource type="Texture2D" uid="uid://x3jjhsh84u01" path="res://assets/Ui/back.png" id="4_hl1oy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yhrs2"]
+font = ExtResource("1_urgfs")
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_hl1oy"]
+font = ExtResource("1_urgfs")
+font_size = 48
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve54p"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(512, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqjev"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(1024, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovj1h"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(1536, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g0p7"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(2048, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_situ6"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(2560, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hu56"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(3072, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njdoy"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(3584, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0vh0"]
+atlas = ExtResource("2_hxuwj")
+region = Rect2(4096, 0, 512, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahcwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve54p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqjev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovj1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g0p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_situ6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hu56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njdoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0vh0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ve54p"]
+paragraph_spacing = 5.0
+font = ExtResource("1_urgfs")
+font_size = 27
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1795310061]
+script = ExtResource("1_yhrs2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1389829448]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06666667, 0.06666667, 0.06666667, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1847987229]
+offset_left = 136.0
+offset_top = 103.0
+offset_right = 1048.0
+offset_bottom = 215.0
+text = "DARK SURVIVAL"
+label_settings = SubResource("LabelSettings_yhrs2")
+horizontal_alignment = 1
+
+[node name="Version" type="Label" parent="TitleLabel" unique_id=1742022459]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 87.0
+offset_right = 909.0
+offset_bottom = 129.0
+text = "V.1.0"
+label_settings = SubResource("LabelSettings_hl1oy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=685548425]
+offset_left = -18.0
+offset_top = 245.0
+offset_right = 482.0
+offset_bottom = 495.0
+scale = Vector2(1.1693068, 1.2905518)
+alignment = 1
+
+[node name="MenuContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=102633836]
+layout_mode = 2
+alignment = 1
+
+[node name="MainButton" type="Button" parent="HBoxContainer/MenuContainer" unique_id=150018105]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_urgfs")
+theme_override_font_sizes/font_size = 64
+text = "Play"
+flat = true
+
+[node name="CreditButton" type="Button" parent="HBoxContainer/MenuContainer" unique_id=67672011]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_urgfs")
+theme_override_font_sizes/font_size = 64
+text = "Credit"
+flat = true
+
+[node name="ExitButton" type="Button" parent="HBoxContainer/MenuContainer" unique_id=1782060075]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_urgfs")
+theme_override_font_sizes/font_size = 64
+text = "Quit
+"
+flat = true
+
+[node name="CharacterPreview" type="Node" parent="HBoxContainer" unique_id=1291199657]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/CharacterPreview" unique_id=1368143494]
+position = Vector2(719, 414)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ahcwf")
+autoplay = "default"
+flip_h = true
+
+[node name="CreditPanel" type="Panel" parent="." unique_id=1869599082]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="CreditPanel" unique_id=66709649]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(2.993867, 2.8611372)
+icon = ExtResource("4_hl1oy")
+
+[node name="CreditLabel" type="Label" parent="CreditPanel" unique_id=441995588]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 134.0
+offset_right = 771.0
+offset_bottom = 489.0
+text = "Dark Survival
+
+Programming
+Maulana Zakki Ibrahim Fajarianto,
+Gemini AI,
+ChatGPT
+
+Art
+Maulana Zakki Ibrahim Fajarianto
+
+Made with Godot 4"
+label_settings = SubResource("LabelSettings_ve54p")
+horizontal_alignment = 1

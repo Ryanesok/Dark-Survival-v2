@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://48qp27r00ami"]
+
+[ext_resource type="Script" uid="uid://c6yvboprrfnh3" path="res://assets/Ui/pause_ui.gd" id="1_sdqqn"]
+[ext_resource type="Texture2D" uid="uid://x3jjhsh84u01" path="res://assets/Ui/back.png" id="2_2hy3q"]
+[ext_resource type="Texture2D" uid="uid://lsjakiaixixm" path="res://assets/Ui/restart.png" id="2_rxtuo"]
+[ext_resource type="Texture2D" uid="uid://bkhug7xayjnnn" path="res://assets/Ui/start.png" id="3_hojgi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5u7ki"]
+load_path = "res://.godot/imported/pause.png-da0518cd8745358f93029bddf7637f4b.ctex"
+
+[node name="PauseUI" type="CanvasLayer" unique_id=460952881]
+layer = 12
+script = ExtResource("1_sdqqn")
+
+[node name="PauseButton" type="Button" parent="." unique_id=620682053]
+offset_left = 504.00003
+offset_top = -3.0
+offset_right = 544.0
+offset_bottom = 37.0
+scale = Vector2(3.4000013, 3.4000006)
+icon = SubResource("CompressedTexture2D_5u7ki")
+flat = true
+
+[node name="Pausepanel" type="Control" parent="." unique_id=1165905377]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Pausepanel" unique_id=1723897442]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.45882353)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pausepanel" unique_id=1199338918]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 227.99997
+offset_right = 432.0
+offset_bottom = 267.99997
+scale = Vector2(4.071315, 4.1476407)
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="RestartButton" type="TextureButton" parent="Pausepanel/HBoxContainer" unique_id=581641401]
+layout_mode = 2
+texture_normal = ExtResource("2_rxtuo")
+
+[node name="StartButton" type="TextureButton" parent="Pausepanel/HBoxContainer" unique_id=1555807178]
+layout_mode = 2
+texture_normal = ExtResource("3_hojgi")
+
+[node name="MenuButton" type="TextureButton" parent="Pausepanel/HBoxContainer" unique_id=1393770462]
+layout_mode = 2
+texture_normal = ExtResource("2_2hy3q")

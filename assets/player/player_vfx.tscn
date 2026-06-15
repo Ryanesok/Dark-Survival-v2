@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://5ebn2u1jtpss"]
+
+[ext_resource type="Texture2D" uid="uid://dhox6lomxtqer" path="res://assets/player/magi-ultimate-vfx.png" id="1_e5g58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkau0"]
+atlas = ExtResource("1_e5g58")
+region = Rect2(0, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyoba"]
+atlas = ExtResource("1_e5g58")
+region = Rect2(512, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhhx2"]
+atlas = ExtResource("1_e5g58")
+region = Rect2(1024, 0, 512, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaq7u"]
+atlas = ExtResource("1_e5g58")
+region = Rect2(1536, 0, 512, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqq1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkau0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyoba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhhx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaq7u")
+}],
+"loop": false,
+"name": &"Vfx",
+"speed": 11.0
+}]
+
+[node name="Player_vfx" type="Node2D" unique_id=33975608]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1479076405]
+position = Vector2(83, -10)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_qqq1g")
+animation = &"Vfx"
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=260265989]

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://d3r3qmfwniisj"]
+
+[ext_resource type="FontFile" uid="uid://c1y8u578gcv8b" path="res://assets/fonts/BoldPixels.ttf" id="1_d0250"]
+[ext_resource type="Script" uid="uid://cupbxpf47p5uv" path="res://assets/Ui/game_over.gd" id="2_d0250"]
+[ext_resource type="Texture2D" uid="uid://x3jjhsh84u01" path="res://assets/Ui/back.png" id="3_8p8y6"]
+[ext_resource type="Texture2D" uid="uid://lsjakiaixixm" path="res://assets/Ui/restart.png" id="4_ilmwq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bt6u"]
+line_spacing = 69.0
+font = ExtResource("1_d0250")
+font_size = 82
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font = ExtResource("1_d0250")
+font_size = 36
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=314450780]
+layer = 20
+script = ExtResource("2_d0250")
+
+[node name="Control" type="Control" parent="." unique_id=1350327125]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=1544406448]
+z_index = 1
+layout_mode = 0
+offset_left = 376.0
+offset_top = 256.0
+offset_right = 725.0
+offset_bottom = 329.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_6bt6u")
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Control" unique_id=1835752723]
+z_index = 1
+layout_mode = 0
+offset_left = 376.0
+offset_top = 339.0
+offset_right = 725.0
+offset_bottom = 379.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=148182568]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3882353)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=631356277]
+layout_mode = 0
+offset_left = 401.00003
+offset_top = 397.0
+offset_right = 497.00003
+offset_bottom = 437.0
+scale = Vector2(2.9842856, 2.9625897)
+theme_override_constants/separation = 16
+
+[node name="MenuButton" type="Button" parent="Control/HBoxContainer" unique_id=1835914469]
+layout_mode = 2
+icon = ExtResource("3_8p8y6")
+flat = true
+
+[node name="RestartButton" type="Button" parent="Control/HBoxContainer" unique_id=1533359850]
+layout_mode = 2
+icon = ExtResource("4_ilmwq")
+flat = true

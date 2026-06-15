@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwe8qrb0b7rdt"]
+
+[ext_resource type="Script" path="res://scripts/game_over_overlay.gd" id="1_cx4cm"]
+
+[node name="GameOverOverlay" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+script = ExtResource("1_cx4cm")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -40.0
+offset_right = 115.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+horizontal_alignment = 1
+vertical_alignment = 1
